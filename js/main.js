@@ -1,15 +1,15 @@
-
-
+var bar1=document.getElementById("bar1")
+var bar2=document.getElementById("bar2")
+var bar3=document.getElementById("bar3")
+var navbar=document.getElementById("navbar")
 var burgerbutton=document.getElementById("burgerbutton");
+
 burgerbutton.addEventListener("click", toggleNav, false);
+navbar.addEventListener("click", closeNavByClick, false);
 
 
 
 function toggleNav () {
-	var bar1=document.getElementById("bar1")
-	var bar2=document.getElementById("bar2")
-	var bar3=document.getElementById("bar3")
-	var navbar=document.getElementById("navbar")
 	
 	
 	if(navbar.className === "mob-nav") {
@@ -26,3 +26,13 @@ function toggleNav () {
 	
 }
 
+
+
+
+function closeNavByClick() {
+	bar1.classList.remove("rotate-bar1");
+	bar2.classList.remove("hidebar2");
+	bar3.classList.remove("rotate-bar3");
+	navbar.classList.remove("show-nav");
+	
+}
